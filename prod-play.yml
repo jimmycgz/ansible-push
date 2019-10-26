@@ -7,7 +7,7 @@
     - name: Copy version file from local to remote 
       become: true
       copy:
-        src: /local_folder/service/config/versions.json
+        src: /local_folder/service/versions.json
         dest: /remote_folder/service/config/versions.json
         owner: your-own-user
         group: your-own-user
@@ -17,8 +17,8 @@
     - name: Copy config file from local to remote 
       become: true
       copy:
-        src: /local_folder/service/config/config-prod.json
-        dest: /remote_folder/service/config/config-prod.json
+        src: /local_folder/service/config-prod.json
+        dest: /remote_folder/service/config/config.json
         owner: your-own-user
         group: your-own-user
         mode: '0600'
