@@ -1,0 +1,11 @@
+{
+
+    "docker_image_URL":"docker.your-domain.com",
+    "LOGLEVEL": "DEBUG",
+    "host_ip": "0.0.0.0",
+    "port_api": "33333",
+    "port_worker": "4444",
+    "DB_USER": "your-user",
+    "DB_PSW": "yourpsw..."
+ 
+}
