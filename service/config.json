@@ -5,7 +5,11 @@
     "host_ip": "0.0.0.0",
     "port_api": "33333",
     "port_worker": "4444",
-    "DB_USER": "your-user",
-    "DB_PSW": "yourpsw..."
+    "Service_USER": "your-user",
+    "Service_PSW": "yourpsw...",
+    "dk_psw": "dk-pass123",
+    "dk_usr": "dk-usr1",
+    "your-own-url": "docker.you-domain.com"
+    
  
 }
