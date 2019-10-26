@@ -23,7 +23,7 @@ for s in $(echo $values | jq -r 'to_entries|map("\(.key)=\(.value|tostring)")|.[
     export $s
 done
 
-
+docker login -p $dk_psw -u $dk_usr $your-own-url:$port
 cd ${Work_folder}
 /usr/local/bin/docker-compose up -d $1
 #Use variables in your docker-compose.yml to get updated versions, ports, paramters
