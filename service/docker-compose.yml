@@ -1,0 +1,35 @@
+version: "3"
+services:
+
+  my-api: 
+    image: "${docker_image_URL}/my-api:${ver_api}"
+    container_name: "my-api"
+
+    environment:
+      - HOSTHOME=$HOME
+
+    ports:
+      - "${port_api}:${port_api}"
+
+    restart: always
+
+    entrypoint: >
+          ./api-cmd -host=${host_ip} -port=${port_api} ...
+          
+
+  my-worker: 
+    image: "${docker_image_URL}/my-worker:${ver_worker}"
+    container_name: "my-worker"
+
+    environment:
+      - HOSTHOME=$HOME
+
+    ports:
+      - "${port_worker}:${port_worker}"
+
+    restart: always
+
+    entrypoint: >
+          ./worker-cmd -host=${host_ip} -port=${port_worker} ...
+          
+
