@@ -1,0 +1,45 @@
+---
+- hosts: prod
+# Copy version and configuration files from local to remote server
+# Copy the script file from local to remote and excute it at remote server
+  tasks:
+
+    - name: Copy version file from local to remote 
+      become: true
+      copy:
+        src: /local_folder/service/config/versions.json
+        dest: /remote_folder/service/config/versions.json
+        owner: your-own-user
+        group: your-own-user
+        mode: '0640'
+        backup: yes
+
+    - name: Copy config file from local to remote 
+      become: true
+      copy:
+        src: /local_folder/service/config/config-prod.json
+        dest: /remote_folder/service/config/config-prod.json
+        owner: your-own-user
+        group: your-own-user
+        mode: '0600'
+        backup: yes
+
+    - name: Copy script file from local to remote 
+      become: true
+      copy:
+        src: /local_folder/service/run.sh
+        dest: /remote_folder/service/run.sh
+        owner: your-own-user
+        group: your-own-user
+        mode: '0700'
+        backup: yes
+
+    - name: run script
+      #become: true
+      command: bash /remote_folder/service/run.sh
+      #script: /local_folder/repos/ansible/demo.sh  #this excutes from your local computer, you may also check remote-src for remote files
+
+    #- name: Install app
+      #apt: 
+        #update_cache: yes
+        #name: nano
