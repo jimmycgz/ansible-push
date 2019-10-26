@@ -1,6 +1,4 @@
 {
-
-    "docker_image_URL":"docker.your-domain.com",
     "LOGLEVEL": "DEBUG",
     "host_ip": "0.0.0.0",
     "port_api": "33333",
@@ -9,7 +7,6 @@
     "Service_PSW": "yourpsw...",
     "dk_psw": "dk-pass123",
     "dk_usr": "dk-usr1",
-    "your-own-url": "docker.you-domain.com"
-    
+    "docker_image_URL":"docker.your-domain.com"
  
 }
