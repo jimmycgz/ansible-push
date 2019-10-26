@@ -18,7 +18,7 @@
       become: true
       copy:
         src: /local_folder/service/config-stg.json
-        dest: /remote_folder/service/config/config-stg.json
+        dest: /remote_folder/service/config/config.json
         owner: your-own-user
         group: your-own-user
         mode: '0600'
