@@ -2,42 +2,48 @@
 - hosts: stg
 # Copy version and configuration files from local to remote server
 # Copy the script file from local to remote and excute it at remote server
+
+  vars:
+    local_folder: /home/your-local/service
+    remote_folder: /home/remote-foo/service
+    your-own-user: my-name
+
   tasks:
 
     - name: Copy version file from local to remote 
       become: true
       copy:
-        src: /local_folder/service/versions.json
-        dest: /remote_folder/service/config/versions.json
-        owner: your-own-user
-        group: your-own-user
+        src: "{{ local_folder }}/versions.json"
+        dest: "{{ remote_folder }}/config/versions.json"
+        owner: "{{ your-own-user }}"
+        group: "{{ your-own-user }}"
         mode: '0640'
         backup: yes
 
     - name: Copy config file from local to remote 
       become: true
       copy:
-        src: /local_folder/service/config-stg.json
-        dest: /remote_folder/service/config/config.json
-        owner: your-own-user
-        group: your-own-user
+        src: "{{ local_folder }}/config-stg.json"
+        dest: "{{ remote_folder }}/config/config.json"
+        owner: "{{ your-own-user }}"
+        group: "{{ your-own-user }}"
         mode: '0600'
         backup: yes
 
     - name: Copy script file from local to remote 
       become: true
       copy:
-        src: /local_folder/service/run.sh
-        dest: /remote_folder/service/run.sh
-        owner: your-own-user
-        group: your-own-user
+        src: "{{ local_folder }}/run.sh"
+        dest: "{{ remote_folder }}/run.sh"
+        owner: "{{ your-own-user }}"
+        group: "{{ your-own-user }}"
         mode: '0700'
         backup: yes
 
     - name: run script
       #become: true
-      command: bash /remote_folder/service/run.sh
-      #script: /local_folder/repos/ansible/demo.sh  #this excutes from your local computer, you may also check remote-src for remote files
+      command: bash "{{ remote_folder }}/run.sh"
+      #script: "{{ local_folder }}/demo.sh"  #this excutes from your local computer, you may also check remote-src for remote files
 
     #- name: Install app
       #apt: 
