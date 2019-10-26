@@ -37,7 +37,7 @@ Feature 2: Get a list of instances by --filter option on describe instance by ta
 
 Step 1: create stage and prod groups in hosts.ini
 
-Step 2: create makefile with different configurations
+Step 2: create makefile with different deploy commands
 
 Step 3: run below lines to deploy separately
 
