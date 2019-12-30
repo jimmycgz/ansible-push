@@ -6,7 +6,7 @@
   vars:
     local_folder: /home/your-local/service
     remote_folder: /home/remote-foo/service
-    your-own-user: my-name
+    your_own_user: my-name
 
   tasks:
 
@@ -15,8 +15,8 @@
       copy:
         src: "{{ local_folder }}/versions.json"
         dest: "{{ remote_folder }}/config/versions.json"
-        owner: "{{ your-own-user }}"
-        group: "{{ your-own-user }}"
+        owner: "{{ your_own_user }}"
+        group: "{{ your_own_user }}"
         mode: '0640'
         backup: yes
 
@@ -25,8 +25,8 @@
       copy:
         src: "{{ local_folder }}/config-stg.json"
         dest: "{{ remote_folder }}/config/config.json"
-        owner: "{{ your-own-user }}"
-        group: "{{ your-own-user }}"
+        owner: "{{ your_own_user }}"
+        group: "{{ your_own_user }}"
         mode: '0600'
         backup: yes
 
@@ -35,8 +35,8 @@
       copy:
         src: "{{ local_folder }}/run.sh"
         dest: "{{ remote_folder }}/run.sh"
-        owner: "{{ your-own-user }}"
-        group: "{{ your-own-user }}"
+        owner: "{{ your_own_user }}"
+        group: "{{ your_own_user }}"
         mode: '0700'
         backup: yes
 
