@@ -22,7 +22,7 @@ To manage the versions of your services on the above groups need a powerful tool
 * Excute the script at remote servers to launch the services defined in the playbook
 ```
 
-https://https://github.com/jimmycgz/ansible-push/ansible-push.png
+![Diagram1](https://github.com/jimmycgz/ansible-push/blob/master/ansible-push.png)
 
 ## Problem to resolve:
 
