@@ -23,6 +23,7 @@ To manage the versions of your services on the above groups need a powerful tool
 ```
 
 ![Diagram1](https://github.com/jimmycgz/ansible-push/blob/master/ansible-push.png)
+ * Picture source: https://www.oreilly.com/library/view/enterprise-cloud-security/9781788299558/43f530d6-2296-4cc7-9ed1-bff6d70a2aa3.xhtml
 
 ## Problem to resolve:
 
