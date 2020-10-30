@@ -22,6 +22,9 @@ To manage the versions of your services on the above groups need a powerful tool
 * Excute the script at remote servers to launch the services defined in the playbook
 ```
 
+
+![Image 1](https://https://github.com/jimmycgz/ansible-push/ansible-push.png)
+
 ## Problem to resolve:
 
 ### How to get a list of public(private) IPS by tag or from a scaling group of EC2 ?
